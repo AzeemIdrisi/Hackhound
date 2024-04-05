@@ -1,12 +1,11 @@
 import React from 'react'
 import Barriers from '../../component/Barriers'
+import ParticleBg from '../../component/ParticleBg'
 
 export default function Home() {
   return (
     <div className='w-screen h-screen grid '>
-      <div className='w-full h-screen bg-blue-600'>
-        The Easiest Way
-      </div>
+      <ParticleBg/>
       <div>
       <Barriers/>
       </div>
