@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '../../component/ui/avatar'
 import { buttonVariants } from '../../component/ui/button'
 import { GroupIcon, HomeIcon, UploadIcon } from 'lucide-react'
 import { User, useAuth0 } from '@auth0/auth0-react'
+import { LogoutButton } from '../../component/Logs'
 
 export default function MainLayout() {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -24,7 +25,7 @@ export default function MainLayout() {
             
             <Dialog className="">
               <DialogTrigger className="flex w-52 gap-4  px-10 py-2 rounded-lg hover:bg-base-accent hover:text-gray-10"><UploadIcon/> Upload</DialogTrigger>
-              <DialogOverlay className="w-screen h-screen grid place-items-center">
+              <DialogOverlay className="w-screen h-screen bg-gray-6 opacity-40 grid place-items-center">
                 <DialogContent className=" p-5 rounded-2xl sm:max-w-[425px] bg-gray-5 text-gray-10">
                   <DialogHeader>
                     <DialogTitle className="font-bold text-xl">Upload</DialogTitle>
@@ -36,7 +37,7 @@ export default function MainLayout() {
                 </DialogContent>
               </DialogOverlay>
             </Dialog>
-            {/* <LogoutButton /> */}
+            <LogoutButton/>
           </ul>
         </div>
       </div>
@@ -55,8 +56,8 @@ export default function MainLayout() {
 
         </HoverCardContent>
       </HoverCard> */}
-      <div className='absolute z-10 right-10 bg-gray-6 '>
-      <Avatar className="w-8">
+      <div className='fixed z-10 right-5 top-5 p-1 rounded-full bg-gray-6 '>
+      <Avatar className="aspect-square">
             <AvatarImage className="rounded-full" src={user.picture} />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
