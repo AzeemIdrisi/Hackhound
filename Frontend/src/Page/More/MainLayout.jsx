@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogOverlay, DialogTitle, Dialog
 // import { HoverCard, HoverCardContent, HoverCardTrigger } from '../../component/ui/hover-card'
 import { Avatar, AvatarFallback, AvatarImage } from '../../component/ui/avatar'
 import { buttonVariants } from '../../component/ui/button'
-import { GroupIcon, HomeIcon, UploadIcon } from 'lucide-react'
+import { DockIcon, GroupIcon, HomeIcon, Upload, UploadIcon } from 'lucide-react'
 import { User, useAuth0 } from '@auth0/auth0-react'
 import { LogoutButton } from '../../component/Logs'
 
@@ -20,10 +20,10 @@ export default function MainLayout() {
         <div className="text-center">
           <h1 className='flex gap-4 justify-start px-4 font-bold text-xl pb-16'> NormalEZ</h1>
           <ul className='grid gap-2 text-gray-3 text-md font-semibold'>
-            <Link to="/" className={buttonVariants({ variant: "secondary", size: "sm", className: "flex w-52 text-gray-5 gap-4 hover:bg-base-accent hover:text-gray-10" })}><HomeIcon/> My Documents</Link>
-            {/* <Link to="/friends" className={buttonVariants({ variant: "secondary", size: "sm", className: "flex w-52 text-gray-10 gap-4 hover:bg-gray-5 hover:text-gray-10" })}><GroupIcon/> Friends</Link> */}
+            <Link to="/admin" className={buttonVariants({ variant: "secondary", size: "sm", className: "flex w-52 text-gray-5 gap-4 hover:bg-base-accent hover:text-gray-10" })}><DockIcon/> ADMIN</Link>
+            <Link to="/" className={buttonVariants({ variant: "secondary", size: "sm", className: "flex w-52 text-gray-5 gap-4 hover:bg-gray-5 hover:text-gray-10" })}><Upload/> Upload</Link>
             
-            <Dialog className="">
+            {/* <Dialog className="">
               <DialogTrigger className="flex w-52 gap-4  px-10 py-2 rounded-lg hover:bg-base-accent hover:text-gray-10"><UploadIcon/> Upload</DialogTrigger>
               <DialogOverlay className="w-screen h-screen bg-gray-6 opacity-40 grid place-items-center">
                 <DialogContent className=" p-5 rounded-2xl sm:max-w-[425px] bg-gray-5 text-gray-10">
@@ -32,11 +32,11 @@ export default function MainLayout() {
                   </DialogHeader>
                   <div className="grid w-full max-w-sm items-center gap-1.5">
                     Upload
-                    {/* <Upload contract={contract} account={account} provider={provider}/> */}
+                    
                   </div>
                 </DialogContent>
               </DialogOverlay>
-            </Dialog>
+            </Dialog> */}
             <LogoutButton/>
           </ul>
         </div>
