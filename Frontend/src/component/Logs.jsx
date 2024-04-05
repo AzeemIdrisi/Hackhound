@@ -1,10 +1,10 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-
+import "../component/style.css"
 export const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
-  return <button onClick={() => loginWithRedirect()} className="bg-base-accent">Log In</button>;
+  return <button onClick={() => loginWithRedirect()} className="btn">Get started</button>;
 };
 export const LogoutButton = () => {
     const { logout } = useAuth0();

@@ -23,23 +23,7 @@ export default function Barriers() {
                     <h3 className='font-bold'>It has survived not only five centuries, </h3>
                 </div>
             </motion.div>
-            <motion.ul className='gifrotate'>
-            <motion.div className='center aspect-square m-5 skew-y-3'
-                initial={{ skew: 0 }}
-                whileHover={{ rotate: 45 }}
-                transition={{ ease: "easeInOut" }}
-            >
-
-                <img src={Click} className='w-32' />
-            </motion.div>
-                <motion.li className="circle-li">1</motion.li>
-                <motion.li className="circle-li">2</motion.li>
-                <motion.li className="circle-li">3</motion.li>
-                <motion.li className="circle-li">4</motion.li>
-                <motion.li className="circle-li">5</motion.li>
-                <motion.li className="circle-li">6</motion.li>
-                {/* <motion.li className="circle-li">7</motion.li> */}
-            </motion.ul>
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExczcyMjRlaGViNGJjcWpwZGtpanNpemh6Y2Fuem81bjJ1ZHV3b28ycCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VeerK4hE9sjoB8e6OQ/giphy.gif"  className="w-64"/>
             
             {/* </AuroraBackground> */}
 
