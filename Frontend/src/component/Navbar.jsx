@@ -1,7 +1,7 @@
 import React from 'react'
 import "./style.css"
 
-export default function Header() {
+export default function Navbar() {
   return (
     <nav class="navbar">
         <div class="navbar-left">

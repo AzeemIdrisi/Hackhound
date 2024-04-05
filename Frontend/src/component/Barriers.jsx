@@ -1,8 +1,5 @@
 import React from 'react'
-import { Boxes } from './ui/background-boxes'
-import { cn } from '../utils/cn'
 import { motion } from "framer-motion"
-import { AuroraBackground } from './ui/aurora-background'
 import Click from "../assets/Image/click.svg"
 
 export default function Barriers() {
