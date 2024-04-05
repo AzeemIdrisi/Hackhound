@@ -42,8 +42,9 @@ export default {
     },
     backgroundColor:{
       'base':{
-        'primary':'#509EB7',
-        'accent':'#6D6C6F'
+        'primary':'#42032C',
+        'accent':'#F1EFDC',
+        'tertiary':"#E6D2AA"
       },
       'gray':{
         '1':'#ACACAC',

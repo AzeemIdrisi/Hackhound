@@ -2,8 +2,11 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './Page/Home/Home';
 import MainLayout from './Page/More/MainLayout';
+import Login from './Page/Home/Login';
+import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
+  const { user, isAuthenticated, isLoading } = useAuth0();
   const router = createBrowserRouter([
     {
       path: "/",
@@ -12,11 +15,17 @@ function App() {
       // ) : (
       //   <Login />
       // ),
-      element:<MainLayout/>,
+      element: isAuthenticated ? (
+        <MainLayout/>
+      ) : (
+        <Login/>
+      ),
       children: [
         {
           path: "/",
-          element: <Home/>
+          element: (
+            <Home/>
+          ),
         },
         // {
         //   path: "/monitor",
