@@ -19,8 +19,9 @@ export default {
     },
     colors:{
       'base':{
-        'primary':'#509EB7',
-        'accent':'#6D6C6F'
+        'primary':'#42032C',
+        'accent':'#F1EFDC',
+        'tertiary':"#E6D2AA"
       },
       'gray':{
         '1':'#ACACAC',
@@ -39,6 +40,9 @@ export default {
         '2':'#CE0E0E',
         '3':'#CEC60E',
       }
+    },
+    backgroundImage:{
+      "grad":"linear-gradient(to top, #F1EFDC 60%,#42032C 40%)",
     },
     backgroundColor:{
       'base':{

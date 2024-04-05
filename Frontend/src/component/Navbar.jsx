@@ -1,28 +1,32 @@
-import React from 'react'
-import "./style.css"
+import React from 'react';
+import "./style.css";
+import { LoginButton } from './Logs';
 
 export default function Navbar() {
+    const scrollToElement = (e) => {
+        const element = document.getElementById(e);
+          element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      };
   return (
-    <><nav class="navbar">
-          <div class="navbar-left">
-              <div class="logo">
-                  <img src="logo.png" alt="Logo"></img>
+      <nav className="navbar px-12 items-center">
+        <div className="logo">
+                  <img src="logo.png" alt="Logo" />
               </div>
-              <ul class="nav-list">
+          <div className="">
+              
+              <ul className="nav-list">
                   <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Contact</a></li>
+                  <li><a onClick={()=>scrollToElement("about")}>About</a></li>
+                  {/* <li><a href="#">home</a></li>
+                  <li><a href="#">home</a></li> */}
               </ul>
           </div>
-          <div class="navbar-right">
-              <button class="btn">Login</button>
-              <button class="btn">Sign Up</button>
+          <div className="navbar-right">
+              <LoginButton />
+             
           </div>
-      </nav><div class=''>
-              <h1 class=''>hello
-              </h1>
-          </div></>
-    
-  )
+      </nav>
+      
+  );
 }
+
