@@ -1,9 +1,14 @@
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: "class",
   theme: {
     container: {
       center: true,
@@ -14,8 +19,9 @@ export default {
     },
     colors:{
       'base':{
-        'primary':'#509EB7',
-        'accent':'#6D6C6F'
+        'primary':'#42032C',
+        'accent':'#F1EFDC',
+        'tertiary':"#E6D2AA"
       },
       'gray':{
         '1':'#ACACAC',
@@ -35,10 +41,14 @@ export default {
         '3':'#CEC60E',
       }
     },
+    backgroundImage:{
+      "grad":"linear-gradient(to top, #F1EFDC 60%,#42032C 40%)",
+    },
     backgroundColor:{
       'base':{
-        'primary':'#509EB7',
-        'accent':'#6D6C6F'
+        'primary':'#42032C',
+        'accent':'#F1EFDC',
+        'tertiary':"#E6D2AA"
       },
       'gray':{
         '1':'#ACACAC',
@@ -82,6 +92,9 @@ export default {
       }
     },
     extend: {
+      animation: {
+        aurora: "aurora 60s linear infinite",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -91,6 +104,14 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -98,6 +119,15 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 }
-
+function addVariablesForColors({ addBase, theme }) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+ 
+  addBase({
+    ":root": newVars,
+  });
+}
