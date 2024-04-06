@@ -26,3 +26,8 @@ Stage 3: Standardized Marks Formulation
 
 ![ss2](https://github.com/AzeemIdrisi/Hackhound/assets/56297047/cc989d5e-880f-4b95-be46-e2181ff0d3d0)
 ![ss1](https://github.com/AzeemIdrisi/Hackhound/assets/56297047/27e2fda2-9ef8-4fff-8ddf-54791712666d)
+
+## Logo
+![logo](https://github.com/AzeemIdrisi/Hackhound/assets/56297047/a142d7b8-93dd-40f5-8bfd-fdaa252493dc)
+
+
