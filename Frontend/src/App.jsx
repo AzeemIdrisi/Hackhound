@@ -26,6 +26,10 @@ function App() {
         {
           path: "/",
           element:<Home/>
+        },
+        {
+          path: "/admin",
+          element:<Admin/>
         }
         // {
         //   path: "/monitor",

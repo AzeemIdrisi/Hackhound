@@ -13,26 +13,26 @@ export function DropdownMenuCheckboxes() {
           <Button variant="outline" className="text-gray-5">Open</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="w-56 bg-gray-5">
-          <DropdownMenuLabel>Appearance</DropdownMenuLabel>
+          <DropdownMenuLabel>Choose Your Board</DropdownMenuLabel>
           <DropdownMenuSeparator />
           <DropdownMenuCheckboxItem
             checked={showStatusBar}
             onCheckedChange={setShowStatusBar}
           >
-            Status Bar
+            ICSC
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
             checked={showActivityBar}
             onCheckedChange={setShowActivityBar}
-            disabled
+            // disabled
           >
-            Activity Bar
+            Assam
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
             checked={showPanel}
             onCheckedChange={setShowPanel}
           >
-            Panel
+            CBSE
           </DropdownMenuCheckboxItem>
         </DropdownMenuContent>
       </DropdownMenu>
