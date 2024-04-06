@@ -1,4 +1,5 @@
 import React from 'react'
+// import Chart from '../../component/Chart'
 
 export default function Admin() {
     const GetData = async()=>{
@@ -11,7 +12,7 @@ export default function Admin() {
     }
   return (
     <div className='w-screen h-screen grid place-items-center text-gray-5'>
-        Admin
+        {/* <Chart/> */}
     </div>
   )
 }
