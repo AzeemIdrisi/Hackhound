@@ -70,7 +70,7 @@ export default function Home() {
   //     ),
   //   })
   return (
-    <div className="">
+    <div className="w-screen h-screen grid place-items-center">
       <form className="grid justify-center" onSubmit={handleSubmit}>
         <input
           // disabled={!account}
