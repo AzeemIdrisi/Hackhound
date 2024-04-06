@@ -17,9 +17,9 @@ export default function Login() {
       </div>
       <div className='text-gray-10 -skew-y-3 h-screen bg-base-tertiary place-items-center px-24 gap-4 grid grid-cols-2' >
         <div className=' grid gap-4 pt-20 skew-y-3' >
-        <h1 className='text-6xl font-bold'> Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-        <h2 className='w-4/6 text-4xl font-bold'> Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti doloremque repudiandae et, ullam perspiciatis error maxime saepe aut facilis recusandae quisquam beatae at assumenda magni iure quaerat repellendus asperiores sint.</h3>
+        <h1 className='text-6xl font-bold'> Normalize-EZ</h1>
+        <h2 className='w-4/6 text-4xl font-bold'>Simplifying Mark Normalization for Students</h2>
+        <h3>NormalizEZ emerges as a beacon of educational integrity, redefining the landscape of fair evaluation. With its innovative approach, GradeSync tackles the complexities of mark normalization, offering students and educators a reliable platform for standardizing grades across varying courses. By facilitating seamless conversion and normalization processes, GradeSync instills confidence in academic outcomes, ensuring that merit and effort are duly recognized. Embracing transparency and equity, GradeSync heralds a new era in education, where every learner receives just and equitable assessment, fostering an environment of excellence and integrity</h3>
 
         </div>
         <img src={ExamBro} className='aspect-square w-3/4'/>
