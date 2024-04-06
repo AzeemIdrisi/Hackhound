@@ -5,6 +5,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel } fr
 import { Button } from '../../component/ui/button'
 import { toast } from '../../component/ui/use-toast'
 import { Label } from '../../component/ui/label'
+import { DropdownMenuCheckboxes } from '../../component/DropDownMenuCheckboxes'
 // UPLOAD
 export default function Home() {
   
@@ -22,6 +23,7 @@ export default function Home() {
   return (
     <div className='w-screen h-screen grid place-items-center'>
       <form onSubmit={handleSubmit} className="w-2/3 space-y-6 text-gray-10 ">
+        <DropdownMenuCheckboxes/>
         <Input type="email" placeholder="Enter your Name"/>
         <h1 className='font-bold text-lg'>Your 10th Marksheet</h1>
         <Input type="file" required/>
