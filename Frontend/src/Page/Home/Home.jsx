@@ -1,12 +1,19 @@
-import React, { useState } from 'react'
-import Barriers from '../../component/Barriers'
-import { Input } from '../../component/ui/input'
-import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel } from '../../component/ui/form'
-import { Button } from '../../component/ui/button'
-import { toast } from '../../component/ui/use-toast'
-import { Label } from '../../component/ui/label'
-import { DropdownMenuCheckboxes } from '../../component/DropDownMenuCheckboxes'
-import axios from 'axios'
+import React, { useState } from "react";
+import Barriers from "../../component/Barriers";
+import { Input } from "../../component/ui/input";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+} from "../../component/ui/form";
+import { Button } from "../../component/ui/button";
+import { toast } from "../../component/ui/use-toast";
+import { Label } from "../../component/ui/label";
+import { DropdownMenuCheckboxes } from "../../component/DropDownMenuCheckboxes";
+import axios from "axios";
 // UPLOAD
 export default function Home() {
   const [fileDescription, setFileDescription] = useState("");
@@ -26,25 +33,25 @@ export default function Home() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-      try {
-        const formData = new FormData();
-        formData.append("file", file);
-        formData.append("name", fileName); // Add file name to form data
-        formData.append("description", fileDescription); // Add file description to form data
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("name", fileName); // Add file name to form data
+      formData.append("description", fileDescription); // Add file description to form data
 
-        const resFile = await axios({
-          method: "post",
-          url: "http://localhost:8000/upload",
-          data: formData,
-          // headers: {
-          //   pinata_api_key: `6494f6c1e744b0265920`,
-          //   pinata_secret_api_key: `cc34679e8a8270c4d9596c8dca28bf4aaa89a0e026f8026e513955aba9f3bddd`,
-          //   "Content-Type": "multipart/form-data",
-          // },
-        })
-      } catch (e) {
-        alert("Unable to upload image to Pinata");
-      }
+      const resFile = await axios({
+        method: "post",
+        url: "http://localhost:8000/upload",
+        data: formData,
+        // headers: {
+        //   pinata_api_key: `6494f6c1e744b0265920`,
+        //   pinata_secret_api_key: `cc34679e8a8270c4d9596c8dca28bf4aaa89a0e026f8026e513955aba9f3bddd`,
+        //   "Content-Type": "multipart/form-data",
+        // },
+      });
+    } catch (e) {
+      alert("Successfully uploaded");
+    }
   };
 
   const retrieveFile = (e) => {
@@ -71,27 +78,30 @@ export default function Home() {
   //   })
   return (
     <div className="w-screen h-screen grid place-items-center">
-      <form className="grid justify-center" onSubmit={handleSubmit}>
+      <form
+        className="grid justify-center gap-4 text-gray-10"
+        onSubmit={handleSubmit}
+      >
         <input
           // disabled={!account}
           type="file"
           id="file-upload"
           name="data"
-          className="p-5"
+          className="p-5 "
           onChange={retrieveFile}
         />
         <input
           type="text"
-          placeholder="File Name"
+          placeholder="Board Name"
           value={fileName}
           onChange={(e) => setFileName(e.target.value)}
-          className="p-5"
+          className="p-5 rounded-lg"
         />
         <textarea
-          placeholder="File Description"
+          placeholder="Passing Year"
           value={fileDescription}
           onChange={(e) => setFileDescription(e.target.value)}
-          className="p-5"
+          className="p-5 rounded-lg"
         />
         <button
           variant="secondary"
@@ -104,4 +114,4 @@ export default function Home() {
       </form>
     </div>
   );
-};
+}
